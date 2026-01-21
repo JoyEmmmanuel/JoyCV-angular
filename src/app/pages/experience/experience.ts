@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../../shared/navbar/navbar';
-import { Footer } from '../../shared/footer/footer';
+import { CommonModule } from '@angular/common'; 
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-experience',
-  imports: [NavbarComponent, Footer],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './experience.html',
 styleUrls: [],
 })
