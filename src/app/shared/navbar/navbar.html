@@ -1,0 +1,35 @@
+<header class="header">
+  <div class="container nav-container">
+    <h1 class="logo">Chidera<span>Codes</span></h1>
+
+    <!-- Navigation links -->
+    <nav class="nav" aria-label="Main navigation">
+    <ul class="nav-list" [class.active]="menuActive">
+  <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+  <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
+  <li><a routerLink="/skills" (click)="closeMenu()">Skills</a></li>
+  <li><a routerLink="/experience" (click)="closeMenu()">Experience</a></li>
+  <li><a routerLink="/projects" (click)="closeMenu()">Projects</a></li>
+  <li><a routerLink="/contact" (click)="closeMenu()">Contact</a></li>
+</ul>
+
+    </nav>
+
+    <!-- Hamburger button -->
+    <button
+      class="menu-btn"
+      aria-label="Toggle menu"
+      (click)="toggleMenu()"
+    >
+      {{ menuActive ? '✕' : '☰' }}
+    </button>
+
+    <!-- Overlay -->
+    <div
+      class="nav-overlay"
+      *ngIf="menuActive"
+      (click)="toggleMenu()"
+    ></div>
+  </div>
+</header>
+
